@@ -1,5 +1,7 @@
 package DSAProject;
+
 import java.util.*;
+
 
 public interface EventScheduler {
     void scheduleAppointment(Scanner scanner, List<Appointment> appointments, Queue<Appointment> appointmentQueue);
@@ -11,4 +13,8 @@ public interface EventScheduler {
     void completeAndRemoveAppointment(Queue<Appointment> appointmentQueue, List<Appointment> appointments);
 
     void loadAppointmentsFromFile(List<Appointment> appointments, Queue<Appointment> appointmentQueue);
+
+    void checkReminders(Queue<Appointment> appointmentQueue);
+
+    void startReminderThread(Queue<Appointment> appointmentQueue);
 }
